@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Task list</title>
+
+  <!-- daisy UI and Tailwind CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-slate-200">
+  <main class="min-h-screen w-full px-4 py-4 sm:px-6">
+    <section
+      class="mx-auto flex h-[calc(100vh-2rem)] w-full max-w-5xl flex-col rounded-[1rem] bg-white p-3 shadow-2xl sm:p-5">
+      <header class="rounded-xl bg-gradient-to-r from-violet-500 to-purple-400 p-4 text-white sm:p-5">
+        <div class="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-white/70">Today</p>
+            <h1 class="my-1 text-2xl font-black tracking-tight sm:text-3xl">Daily Task Board</h1>
+            <p id="todayDate" class="text-sm text-white/90"></p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <button id="hintsBtn"
+              class="btn btn-sm h-10 gap-2 rounded-xl border-0 bg-white text-violet-600 shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+              type="button" onclick="hintsModal.showModal()" title="Open usage tips and quick guide"
+              aria-label="Open hints">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.1 9a3 3 0 1 1 5.8 1c-.5 1.5-2.1 2-2.6 3"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+              Hints
+            </button>
+            <div class="join rounded-xl border border-white/35 bg-white/20 p-1 shadow-md gap-2"
+              title="Choose how many task cards stay visible before scrolling">
+              <button
+                class="btn btn-sm join-item h-8 min-w-14 rounded-lg border-0 bg-transparent text-white transition-all duration-200 hover:bg-white/30"
+                id="showFiveBtn" type="button" data-limit="5" aria-label="Show 5 tasks"
+                title="Show 5 task cards before scrolling">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 6h16"></path>
+                  <path d="M4 12h16"></path>
+                  <path d="M4 18h10"></path>
+                </svg>
+                5
+              </button>
+              <button
+                class="btn btn-sm join-item h-8 min-w-14 rounded-lg border-0 bg-transparent text-white transition-all duration-200 hover:bg-white/30"
+                id="showSevenBtn" type="button" data-limit="7" aria-label="Show 7 tasks"
+                title="Show 7 task cards before scrolling">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 6h16"></path>
+                  <path d="M4 10h16"></path>
+                  <path d="M4 14h16"></path>
+                  <path d="M4 18h16"></path>
+                </svg>
+                7
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      
+
+  <script src="script.js"></script>
+</body>
+
+</html>
